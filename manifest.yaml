@@ -1,0 +1,69 @@
+basePath: /
+definitions:
+  InvalidInput:
+    properties:
+      error: {type: string}
+    type: object
+  ProcessingError:
+    properties:
+      error: {type: string}
+    type: object
+host: AUTO:5011
+info:
+  contact: {email: fred@PageKicker.com, name: Fred Zimmerman, url: 'https://www.PageKicker.com'}
+  description: Implements all Linux fortune features and provides access to 100+ databases, many available nowhere else. See https://machinepayableweb.wordpress.com/2016/09/25/superior-fortune/
+    for list of available fortunes. To create fortune21 command, cd fortune21 && sudo pip3 install --editable .
+  license: {name: PageKicker Terms of Use, url: 'http://www.pagekicker.com/index.php/terms-conditions'}
+  termsOfService: http://www.pagekicker.com/index.php/terms-conditions
+  title: fortune21
+  version: 0.9.0
+  x-21-app-image: https://cdn.filepicker.io/api/file/6aRuNUQLTOqtq3lbX6sA
+  x-21-category: entertainment
+  x-21-github-profile-url: ''
+  x-21-github-project-url: ''
+  x-21-keywords: [humor, jokes, sentiment, entertainment, literature, fiction]
+  x-21-quick-buy: '21 buy "http://[fcce:a977:eef0:ac6d:2715:0000:0000:0001]:5007/fortune" --data ''{"options" : "-c riddles literature"}'''
+  x-21-total-price: {max: 3000, min: 3000}
+  x-21-usage: '
+    Fortunes available include: * fortunes (default) * aphorisms * bashdefs * chinese
+    (also song100, tang300) * freebsd * kernel-newbies * literature * nevertrump *
+    openbsd * perl * pets * riddles * wizardfacts TV shows: * 2brokegirls * 3rfts
+    * americandad * arresteddevelopment * betteroffted * blackadder * blackbooks *
+    breakingbad * bunheads * burnnotice * californication * carnivale * chappelle
+    * chuck * darkangel * darkwingduck * dexter * dexterslab * dharmaandgreg * ducktales
+    * eureka * foo * freshprince * fringe * fullhouse * himym * homeland * kylexy
+    * lafemmenikita * leagueofgentlemen * lost * lostgirl * marriedwithchildren *
+    mentalist * metalocalypse * mlpfim * mrsunshine * mynameisearl * newgirl * prettylittleliars
+    * psych * quantumleap * sabrina * scrubs * sherlock * southpark * supernatural
+    * tgagaapp * that70sshow * thebigbangtheory * thenewsroom * theshield * torchwood
+    * twoandahalfmen * warehouse13 * willandgrace
+
+    '
+parameters:
+  htmlParam:
+    description: html
+    in: body
+    name: html
+    required: true
+    schema:
+      properties:
+        html: {type: string}
+  textParam:
+    description: text
+    in: body
+    name: text
+    required: true
+    schema:
+      properties:
+        text: {type: string}
+  urlParam:
+    description: url
+    in: body
+    name: url
+    required: true
+    schema:
+      properties:
+        url: {type: string}
+schemes: [http]
+swagger: '2.0'
+x-21-manifest-path: /manifest
