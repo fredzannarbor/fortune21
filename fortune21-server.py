@@ -22,13 +22,13 @@ payment = Payment(app, wallet)
 def buy_fortune():
 
     options = str(request.args.get('options'))
-    print(options)
-    x = options or ''
-    print(x)
+    #print(options)
+    # x = options or ''
+    #print(x)
     optvalue = 'fortune' + ' ' + options
-    print(optvalue)
+   # print(optvalue)
     args = shlex.split(optvalue)
-    print(args)
+    #print(args)
     fortune = subprocess.check_output(args)
     return fortune
 

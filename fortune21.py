@@ -15,11 +15,11 @@ server_url = 'http://[::]:5011/'
 #@click.command('cli')
 def cli():
    string = sys.argv[1:]
-   print(string)
+   #print(string)
    args = " ".join(string)
-   print(args)
+   #print(args)
    payload = {"options" : args }
-   print(payload)
+   #print(payload)
    sel_url = server_url+'fortune'
    response = requests.get(url=sel_url.format(), params=payload)
    print(response.text)
