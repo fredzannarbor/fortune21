@@ -4,7 +4,7 @@ import sys
 from two1.wallet import Wallet
 from two1.bitrequests import BitTransferRequests
 
-print(sys.argv[1:])
+#print(sys.argv[1:])
 # set up bitrequest client for BitTransfer requests
 wallet = Wallet()
 requests = BitTransferRequests(wallet)
